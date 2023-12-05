@@ -7,13 +7,33 @@ Questa cartella contiene una libreria di script Dynamo per Revit a disposizione 
 <B>Versione Revit: 2022</B><BR/>
 <B>Versione Dynamo: 2.1</B><BR/>
 <B>Packages: Camber</B><BR/>
-<B>Parametri: Foglio, ecc ecc</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
 Lo script fa questo e questo
 
-Rooms_to_LineGroups
+<H2>Rooms_to_LineGroups</H2>
+<B>Versione Revit: 2022</B><BR/>
+<B>Versione Dynamo: 2.1</B><BR/>
+<B>Packages: Camber</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
+Lo script fa questo e questo
 
-Set_External_Property
+<H2>Set_External_Property</H2>
+<B>Versione Revit: 2022</B><BR/>
+<B>Versione Dynamo: 2.1</B><BR/>
+<B>Packages: Camber</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
+Lo script fa questo e questo
 
-Transfer_ViewFilters
+<H2>Transfer_ViewFilters</H2>
+<B>Versione Revit: 2022</B><BR/>
+<B>Versione Dynamo: 2.1</B><BR/>
+<B>Packages: Camber</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
+Lo script fa questo e questo
 
-XLS_Parameter_Compiler
+<H2>XLS_Parameter_Compiler</H2>
+<B>Versione Revit: 2022</B><BR/>
+<B>Versione Dynamo: 2.1</B><BR/>
+<B>Packages: Camber</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
+Lo script fa questo e questo
