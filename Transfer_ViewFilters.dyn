@@ -1,0 +1,655 @@
+{
+  "Uuid": "f0c05e34-ee0a-4b55-ba44-f958bed110a2",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Transfer_ViewFilters",
+  "ElementResolver": {
+    "ResolutionMap": {}
+  },
+  "Inputs": [
+    {
+      "Id": "5b2818d3a03c4173b0531bb34f14fabe",
+      "Name": "Nome Filtro",
+      "Type": "string",
+      "Value": "Muro Mattoni",
+      "Description": "Crea una stringa."
+    }
+  ],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.View.Filters",
+      "Id": "ea0ebe5346284f67b1a8fb3646b52632",
+      "Inputs": [
+        {
+          "Id": "2a70de54a66c4f1eb8aa6f44a059485c",
+          "Name": "view",
+          "Description": "Revit.Elements.Views.View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "123dbefc516d42968367d62d7d03667a",
+          "Name": "filter",
+          "Description": "Filtri vista",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Ottieni filtri vista\n\nView.Filters: ParameterFilterElement[]"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 20,
+      "SelectedString": "Esempio Muro Verde",
+      "NodeType": "ExtensionNode",
+      "Id": "558d6f027ecb4d5d971a266cee6f3f82",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "71c6316f098d43a3ac8b301edfe7c2e3",
+          "Name": "Views",
+          "Description": "Elemento Views selezionato",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Tutte le viste disponibili nel documento corrente."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.View.AddFilter@Revit.Filter.ParameterFilterElement",
+      "Id": "60abbfd210d84d608e5d053334f3dc88",
+      "Inputs": [
+        {
+          "Id": "4e662065844743deba8e2e2f1a745e41",
+          "Name": "view",
+          "Description": "Revit.Elements.Views.View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "5cfe76b57a1a45408a31b0db20636fa1",
+          "Name": "parameterFilter",
+          "Description": "Filtro parametro\n\nParameterFilterElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "40a4cfa96e264b8e929d6d6ca5118ae7",
+          "Name": "view",
+          "Description": "Vista",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Aggiungere un filtro ad una vista. Il filtro verrà aggiunto anche se alla vista è stato applicato un modello di vista. Normalmente un utente non può aggiungere filtri senza avere prima disattivato o modificato il modello di vista stesso.\n\nView.AddFilter (parameterFilter: ParameterFilterElement): View"
+    },
+    {
+      "ConcreteType": "DSRevitNodesUI.Views, DSRevitNodesUI",
+      "SelectedIndex": 19,
+      "SelectedString": "Esempio Destinazione",
+      "NodeType": "ExtensionNode",
+      "Id": "625b5ff45f7441d7b48ec978d3ea3ec8",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "19fb72133a1e43ea964fc13e1f92df61",
+          "Name": "Views",
+          "Description": "Elemento Views selezionato",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Tutte le viste disponibili nel documento corrente."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.View.FilterOverrides@Revit.Filter.ParameterFilterElement",
+      "Id": "a9ac336d41f14f8bb4eb5112b9d26d20",
+      "Inputs": [
+        {
+          "Id": "90da6544a4d941ae8c7f76ceeb64f752",
+          "Name": "view",
+          "Description": "Revit.Elements.Views.View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "2c11d74d7e514d3ebc417e2260f60bca",
+          "Name": "parameterFilter",
+          "Description": "ParameterFilterElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cf21e4c618964a28a27b1e2d5ef6f612",
+          "Name": "overrides",
+          "Description": "Sostituzioni filtro",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Ottieni sostituzioni filtro\n\nView.FilterOverrides (parameterFilter: ParameterFilterElement): OverrideGraphicSettings"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Element.Name",
+      "Id": "753759793f084e8e8f3a2ff30b85a3b8",
+      "Inputs": [
+        {
+          "Id": "97fd2cf50a0e4bd0a0c9aa28527209c6",
+          "Name": "element",
+          "Description": "Revit.Elements.Element",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "bc7ebebe1cc94bac9d8e6ed84251b224",
+          "Name": "string",
+          "Description": "string",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Ottiene il nome dell'elemento\n\nElement.Name: string"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.StringInput, CoreNodeModels",
+      "NodeType": "StringInputNode",
+      "InputValue": "Muro Mattoni",
+      "Id": "5b2818d3a03c4173b0531bb34f14fabe",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "76e8d51e632549498a6e7e265ba24454",
+          "Name": "",
+          "Description": "String",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Crea una stringa."
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.Contains@var[]..[],var[]..[]",
+      "Id": "1ea12451850844129d9fb1d6d8789797",
+      "Inputs": [
+        {
+          "Id": "1b078eafb7024b05a15ac45831496ee0",
+          "Name": "list",
+          "Description": "Elenco in cui eseguire la ricerca.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "883c61a63f0e4090a10c335c547cce12",
+          "Name": "item",
+          "Description": "Elemento da ricercare.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fd7506996e5a44abbe3f2f1fc745ce7b",
+          "Name": "bool",
+          "Description": "Se l'elenco contiene l'elemento specificato.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Determina se l'elenco dato contiene l'elemento specificato. Questa funzione consente di eseguire ricerche attraverso i sottoelenchi in esso contenuti.\n\nList.Contains (list: var[]..[], item: var[]..[]): bool"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "DSCore.List.FilterByBoolMask@var[]..[],var[]..[]",
+      "Id": "a43a85d40bed4d4687b7785b713f0789",
+      "Inputs": [
+        {
+          "Id": "9e06ad62630b4aa385c6417fb6cbb144",
+          "Name": "list",
+          "Description": "Elenco al quale applicare il filtro.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "19c2f7db0bb84093a9a63b507839de63",
+          "Name": "mask",
+          "Description": "Elenco di valori booleani che rappresenta una maschera.\n\nvar[]..[]",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "141737d7e04642359fac6ab7e88c51f2",
+          "Name": "in",
+          "Description": "Elementi per i quali l'indice della maschera è true.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "54ada3fcaed5452abb7d3fd81ff3ccb8",
+          "Name": "out",
+          "Description": "Elementi per i quali l'indice della maschera è false.",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Consente di applicare un filtro ad una sequenza sulla base di indici corrispondenti in un elenco di valori booleani separato.\n\nList.FilterByBoolMask (list: var[]..[], mask: var[]..[]): var[]..[]"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Revit.Elements.Views.View.SetFilterOverrides@Revit.Filter.ParameterFilterElement,Revit.Filter.OverrideGraphicSettings,bool",
+      "Id": "418723b8b6a545698969d64ca00cb4d3",
+      "Inputs": [
+        {
+          "Id": "b6915c33704445d28db78f11feea362f",
+          "Name": "view",
+          "Description": "Revit.Elements.Views.View",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "72d75f812cc54b17bc03239dc74c352e",
+          "Name": "parameterFilter",
+          "Description": "Filtro parametro\n\nParameterFilterElement",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc7dfa0a8b2342168419e47c74a3e040",
+          "Name": "overrides",
+          "Description": "Impostazioni di sostituzioni grafiche\n\nOverrideGraphicSettings",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8b5adca462354091a59d1394fda36000",
+          "Name": "hide",
+          "Description": "Se True, il filtro dato verrà nascosto.\n\nbool\nValore di default : false",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "40d80afa70f143469f8599274a808202",
+          "Name": "view",
+          "Description": "Vista",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "Impostare le sostituzioni filtro. Se la vista non presenta un filtro specificato, verrà prima aggiunto alla vista e quindi le relative impostazioni verranno sostituite. Questo comportamento continuerà anche se la vista presenta un Modello vista applicato, il quale solitamente impedirebbe all'utente di aggiungere i filtri senza prima aver disattivato o modificato il Modello vista.\n\nView.SetFilterOverrides (parameterFilter: ParameterFilterElement, overrides: OverrideGraphicSettings, hide: bool = false): View"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.BoolSelector, CoreNodeModels",
+      "NodeType": "BooleanInputNode",
+      "InputValue": true,
+      "Id": "bcf247a016a3401b9e3baddb3fd47cda",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "32e0ee7f084f48deac009218fc8cf253",
+          "Name": "",
+          "Description": "Boolean",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "Possibile selezione: true o false."
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "123dbefc516d42968367d62d7d03667a",
+      "End": "97fd2cf50a0e4bd0a0c9aa28527209c6",
+      "Id": "f5def68a21ec403fa2a4d34f79a6a993"
+    },
+    {
+      "Start": "123dbefc516d42968367d62d7d03667a",
+      "End": "9e06ad62630b4aa385c6417fb6cbb144",
+      "Id": "c928f13bf7464cba85dd1824f438e1b4"
+    },
+    {
+      "Start": "71c6316f098d43a3ac8b301edfe7c2e3",
+      "End": "2a70de54a66c4f1eb8aa6f44a059485c",
+      "Id": "8a95cd1e825343f6af65570ad808b8ef"
+    },
+    {
+      "Start": "71c6316f098d43a3ac8b301edfe7c2e3",
+      "End": "90da6544a4d941ae8c7f76ceeb64f752",
+      "Id": "0fc13a318d7943668830b9816d013598"
+    },
+    {
+      "Start": "40a4cfa96e264b8e929d6d6ca5118ae7",
+      "End": "b6915c33704445d28db78f11feea362f",
+      "Id": "545eec4e538149bfad1f2a07027c2f80"
+    },
+    {
+      "Start": "19fb72133a1e43ea964fc13e1f92df61",
+      "End": "4e662065844743deba8e2e2f1a745e41",
+      "Id": "a0116d24172548c19760ae93a15df459"
+    },
+    {
+      "Start": "cf21e4c618964a28a27b1e2d5ef6f612",
+      "End": "fc7dfa0a8b2342168419e47c74a3e040",
+      "Id": "254d6b60af2b421da3ef0a0785312b46"
+    },
+    {
+      "Start": "bc7ebebe1cc94bac9d8e6ed84251b224",
+      "End": "1b078eafb7024b05a15ac45831496ee0",
+      "Id": "da3de2c7c8f34929b94133a026a641f7"
+    },
+    {
+      "Start": "76e8d51e632549498a6e7e265ba24454",
+      "End": "883c61a63f0e4090a10c335c547cce12",
+      "Id": "cd403e39ccdf4e8fa7997077ae9b632a"
+    },
+    {
+      "Start": "fd7506996e5a44abbe3f2f1fc745ce7b",
+      "End": "19c2f7db0bb84093a9a63b507839de63",
+      "Id": "15cf3af3d83542e18f9bbdbe305108f6"
+    },
+    {
+      "Start": "141737d7e04642359fac6ab7e88c51f2",
+      "End": "2c11d74d7e514d3ebc417e2260f60bca",
+      "Id": "6a4e05ce21234f90b1ccc57c0fc8a675"
+    },
+    {
+      "Start": "141737d7e04642359fac6ab7e88c51f2",
+      "End": "5cfe76b57a1a45408a31b0db20636fa1",
+      "Id": "bf975101d4b343c4b6662924837bd9ff"
+    },
+    {
+      "Start": "141737d7e04642359fac6ab7e88c51f2",
+      "End": "72d75f812cc54b17bc03239dc74c352e",
+      "Id": "2121bde4ba5946e38dba44aab9589b2c"
+    },
+    {
+      "Start": "32e0ee7f084f48deac009218fc8cf253",
+      "End": "8b5adca462354091a59d1394fda36000",
+      "Id": "ff2fa79bf40c46e593e475bf790b934e"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.10.1.3976",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "Anteprima sfondo",
+      "EyeX": -4.2179160118103027,
+      "EyeY": 10.06301212310791,
+      "EyeZ": -5.490656852722168,
+      "LookX": -0.78208398818969727,
+      "LookY": 0.93698787689208984,
+      "LookZ": -2.509343147277832,
+      "UpX": 0.15767857432365417,
+      "UpY": 0.84804809093475342,
+      "UpZ": 0.50591689348220825
+    },
+    "NodeViews": [
+      {
+        "Id": "ea0ebe5346284f67b1a8fb3646b52632",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "View.Filters",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 876.0586068700494,
+        "Y": -14.845578024139172
+      },
+      {
+        "Id": "558d6f027ecb4d5d971a266cee6f3f82",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Vista Sorgente",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 487.73179475829841,
+        "Y": 156.59369570865857
+      },
+      {
+        "Id": "60abbfd210d84d608e5d053334f3dc88",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "View.AddFilter",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1848.8923393778903,
+        "Y": 251.86931986303955
+      },
+      {
+        "Id": "625b5ff45f7441d7b48ec978d3ea3ec8",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Vista Destinatazione",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 496.30423263371324,
+        "Y": 248.0225085685712
+      },
+      {
+        "Id": "a9ac336d41f14f8bb4eb5112b9d26d20",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "View.FilterOverrides",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2126.8498385036842,
+        "Y": 162.02463948674028
+      },
+      {
+        "Id": "753759793f084e8e8f3a2ff30b85a3b8",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Element.Name",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1080.2868754487856,
+        "Y": -100.96977897745217
+      },
+      {
+        "Id": "5b2818d3a03c4173b0531bb34f14fabe",
+        "IsSetAsInput": true,
+        "IsSetAsOutput": false,
+        "Name": "Nome Filtro",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 548.543847222915,
+        "Y": 343.097099015454
+      },
+      {
+        "Id": "1ea12451850844129d9fb1d6d8789797",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "List.Contains",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1314.0233635950651,
+        "Y": -15.897636593393088
+      },
+      {
+        "Id": "a43a85d40bed4d4687b7785b713f0789",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "List.FilterByBoolMask",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 1518.2441643165855,
+        "Y": -102.85261268448824
+      },
+      {
+        "Id": "418723b8b6a545698969d64ca00cb4d3",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "View.SetFilterOverrides",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2442.9868237905271,
+        "Y": 251.81604530489022
+      },
+      {
+        "Id": "bcf247a016a3401b9e3baddb3fd47cda",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Name": "Boolean",
+        "ShowGeometry": true,
+        "Excluded": false,
+        "X": 2261.0119519081695,
+        "Y": 354.88567008812089
+      }
+    ],
+    "Annotations": [
+      {
+        "Id": "92fb891072f94d86a33d9be9f26176d4",
+        "Title": "Inputs",
+        "Nodes": [
+          "558d6f027ecb4d5d971a266cee6f3f82",
+          "625b5ff45f7441d7b48ec978d3ea3ec8",
+          "5b2818d3a03c4173b0531bb34f14fabe"
+        ],
+        "Left": 477.73179475829841,
+        "Top": 103.59369570865857,
+        "Width": 227.57243787541483,
+        "Height": 307.50340330679541,
+        "FontSize": 36.0,
+        "InitialTop": 156.59369570865857,
+        "InitialHeight": 331.50340330679541,
+        "TextblockHeight": 43.0,
+        "Background": "#FFD8D8D8"
+      },
+      {
+        "Id": "a468dcae01ee44c3bc17ee5355db9bbe",
+        "Title": "Filter_Finder",
+        "Nodes": [
+          "ea0ebe5346284f67b1a8fb3646b52632",
+          "753759793f084e8e8f3a2ff30b85a3b8",
+          "1ea12451850844129d9fb1d6d8789797",
+          "a43a85d40bed4d4687b7785b713f0789"
+        ],
+        "Left": 866.0586068700494,
+        "Top": -155.85261268448824,
+        "Width": 833.18555744653611,
+        "Height": 258.95497609109515,
+        "FontSize": 36.0,
+        "InitialTop": -102.85261268448824,
+        "InitialHeight": 233.00703466034906,
+        "TextblockHeight": 43.0,
+        "Background": "#FFFFC999"
+      },
+      {
+        "Id": "c649ba65baf64c0baf2ff3187b7f1db2",
+        "Title": "Set_Filter",
+        "Nodes": [
+          "60abbfd210d84d608e5d053334f3dc88",
+          "a9ac336d41f14f8bb4eb5112b9d26d20",
+          "418723b8b6a545698969d64ca00cb4d3",
+          "bcf247a016a3401b9e3baddb3fd47cda"
+        ],
+        "Left": 1838.8923393778903,
+        "Top": 109.02463948674028,
+        "Width": 855.0944844126368,
+        "Height": 313.86103060138061,
+        "FontSize": 36.0,
+        "InitialTop": 162.02463948674028,
+        "InitialHeight": 290.86103060138061,
+        "TextblockHeight": 43.0,
+        "Background": "#FFB9F9E1"
+      }
+    ],
+    "X": -287.19958606253545,
+    "Y": 314.22309225485719,
+    "Zoom": 0.65120581898282937
+  }
+}
