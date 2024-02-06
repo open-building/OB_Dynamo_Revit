@@ -20,11 +20,12 @@ Lo script consente di automatizzare la modellazione di un GuardRail completo su 
 <B>Known Issues:</B> Si precisa che all'interno della Profile Family si dovrà eventualmente ruotare e specchiare la sezione sino alla posizione desiderata.<BR/>
 
 <H2>Rooms_to_LineGroups</H2>
-<B>Versione Revit: 2022</B><BR/>
-<B>Versione Dynamo: 2.1</B><BR/>
-<B>Packages: Camber</B><BR/>
-<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
-Lo script fa questo e questo
+<B>Versione Revit:</B> 2022<BR/>
+<B>Versione Dynamo:</B> 2.12<BR/>
+<B>Packages:</B> Archi-Lab, Clockwork<BR/>
+<B>Parametri:</B>-<BR/><BR/>
+Lo script automatizza nel file Revit il ricalco dei locali hostati da modelli esterni restituendone i perimetro come gruppi di linee, così da consentire la stampa di una bordatura colorata in base a convenzioni grafiche sulle relative finiture.<BR/><BR/>
+<B>Known Issues:</B> Talvolta i gruppi di linee non si autoposizionano sui locali, in tal caso andranno inseriti manualmente dalla categoria Gruppi del Brwoser.<BR/>
 
 <H2>Set_External_Property</H2>
 <B>Versione Revit: 2022</B><BR/>
