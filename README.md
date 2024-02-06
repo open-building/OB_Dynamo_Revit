@@ -37,3 +37,8 @@ Lo script automatizza nel file Revit il ricalco dei locali hostati da modelli es
 Lo script consente di trasferire un determinato Filtro e le sue impostazioni grafiche tra diversi Template Vista, evitando la necessità di una configurazione manuale.<BR/>
 
 <H2>XLS_Parameter_Compiler</H2>
+<B>Versione Revit:</B> 2019<BR/>
+<B>Versione Dynamo:</B> 2.12<BR/>
+<B>Packages:</B> -<BR/>
+<B>Parametri:</B> Seleziona File XLS, Nome Foglio, N. Celle Intestazione, N. Cella di Riscontro, N. Cella da Prelavare, Categoria Revit, Parametro Revit di Riferimento, Parametro Revit di Destinazione<BR/><BR/>
+Lo script consente di automatizzare la compilazione di un qualsiasi Parametro su una certa categoria Revit a partire da un foglio Excel sorgente. Verranno quindi richiesti il file, il nome del foglio ed il numero di celle intestazione che Dynamo trascurerà. Il numero della cella di riscontro consentirà allo script di creare l'associazione tra il file Excel ed il parametro Revit di riferimento, il numerdo della cella da prelevare andrà quindi a valorizzare il corrispettivo parametro Revit di Destinazione.<BR/>
