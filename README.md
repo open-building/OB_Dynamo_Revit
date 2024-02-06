@@ -9,6 +9,13 @@ Questa cartella contiene una libreria di script Dynamo per Revit a disposizione 
 <B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
 Lo script fa questo e questo
 
+<H2>GuardRail_Profiler</H2>
+<B>Versione Revit: 2022</B><BR/>
+<B>Versione Dynamo: 2.1</B><BR/>
+<B>Packages: Camber</B><BR/>
+<B>Parametri: Foglio, ecc ecc</B><BR/><BR/>
+Lo script fa questo e questo
+
 <H2>Rooms_to_LineGroups</H2>
 <B>Versione Revit: 2022</B><BR/>
 <B>Versione Dynamo: 2.1</B><BR/>
